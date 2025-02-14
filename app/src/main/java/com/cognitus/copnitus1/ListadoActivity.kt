@@ -13,8 +13,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cognitus.copnitus1.adapter.RecyclerAdapter
 import com.cognitus.copnitus1.databinding.ActivityListadoBinding
 import com.cognitus.copnitus1.model.Superhero
+import com.cognitus.copnitus1.utils.ToolbarActivity
 
-class ListadoActivity : AppCompatActivity(), View.OnClickListener {
+class ListadoActivity : ToolbarActivity(), View.OnClickListener {
     private val binding by lazy {
         DataBindingUtil.setContentView<ActivityListadoBinding>(this, R.layout.activity_listado)
     }
@@ -29,6 +30,7 @@ class ListadoActivity : AppCompatActivity(), View.OnClickListener {
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         mAdapter.RecyclerAdapter(getSuperheros(), this)
         mRecyclerView.adapter = mAdapter
+        initializeToolbar(binding.mainBar, "Superheroes", true, true)
     }
 
     fun getSuperheros(): MutableList<Superhero>{

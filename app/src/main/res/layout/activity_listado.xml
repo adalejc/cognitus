@@ -9,8 +9,12 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <include
+            android:id="@+id/mainBar"
+            layout="@layout/toolbar" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSuperheroList"
+            android:layout_below="@+id/mainBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RelativeLayout>

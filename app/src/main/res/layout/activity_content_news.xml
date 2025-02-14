@@ -15,12 +15,15 @@
         android:layout_marginRight="10dp"
         tools:context=".ContentNewsActivity"
         >
+        <include
+            android:id="@+id/mainBar"
+            layout="@layout/toolbar" />
         <ImageView
             android:id="@+id/ivNewsPhoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxHeight="100dp"
-            android:layout_alignParentTop="true"
+            android:layout_below="@+id/mainBar"
             android:src="@drawable/logo"
             />
         <LinearLayout

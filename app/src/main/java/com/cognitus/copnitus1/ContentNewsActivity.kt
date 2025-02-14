@@ -15,11 +15,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import com.cognitus.copnitus1.databinding.ActivityContentNewsBinding
+import com.cognitus.copnitus1.utils.ToolbarActivity
 import com.squareup.picasso.Picasso
 import java.net.URL
 import kotlin.math.log
 
-class ContentNewsActivity : AppCompatActivity(), View.OnClickListener {
+class ContentNewsActivity : ToolbarActivity(), View.OnClickListener {
     private var newsUrl: String? = null
     private val binding by lazy {
         DataBindingUtil.setContentView<ActivityContentNewsBinding>(this, R.layout.activity_content_news)
@@ -42,7 +43,7 @@ class ContentNewsActivity : AppCompatActivity(), View.OnClickListener {
         binding.tvNewsDescription.text = newsDescription
         binding.ivNewsPhoto.loadUrl(newsPhoto.toString())
 
-
+        initializeToolbar(binding.mainBar, "Detalle de noticia", true, false)
         Log.i( "binding.titleNews", " binding.titleNews: " + binding.titleNews)
 
     }

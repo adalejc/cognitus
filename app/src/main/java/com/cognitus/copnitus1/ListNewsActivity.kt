@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cognitus.copnitus1.adapter.RecyclerNewsAdapter
 import com.cognitus.copnitus1.databinding.ActivityListNewsBinding
 import com.cognitus.copnitus1.model.News
+import com.cognitus.copnitus1.utils.ToolbarActivity
 
-class ListNewsActivity : AppCompatActivity(), View.OnClickListener {
+class ListNewsActivity : ToolbarActivity(), View.OnClickListener {
     private val binding by lazy {
         DataBindingUtil.setContentView<ActivityListNewsBinding>(this, R.layout.activity_list_news)
     }
@@ -28,6 +29,7 @@ class ListNewsActivity : AppCompatActivity(), View.OnClickListener {
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         mAdapter.RecyclerNewsAdapter(getNewsList(), this)
         mRecyclerView.adapter = mAdapter
+        initializeToolbar(binding.mainBar, "Noticias de hoy", true, true)
     }
 
     fun getNewsList(): MutableList<News> {
