@@ -1,6 +1,7 @@
 package com.cognitus.copnitus1.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.cognitus.copnitus1.ContentNewsActivity
 import com.cognitus.copnitus1.R
 import com.cognitus.copnitus1.model.News
 import com.squareup.picasso.Picasso
@@ -46,6 +48,13 @@ class RecyclerNewsAdapter: RecyclerView.Adapter<RecyclerNewsAdapter.ViewNewsHold
             photo.loadUrl(news.photo)
             itemView.setOnClickListener(View.OnClickListener {
                 Toast.makeText(context, news.title, Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, ContentNewsActivity::class.java)
+                intent.putExtra("title", news.title)
+                intent.putExtra("date", news.date)
+                intent.putExtra("description", news.description)
+                intent.putExtra("photo", news.photo)
+                intent.putExtra("url", news.url)
+                context.startActivity(intent)
             })
         }
 
