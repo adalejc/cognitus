@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">cognitus 1</string>
+    <string name="title1">Iniciar sessión</string>
+    <string name="title2">Hola es español mexicano</string>
+    <string name="txtButton">Iniciar</string>
+    <string name="txtEditTextUser">Usuario</string>
+    <string name="txtEditTextPassword">Contraseña</string>
+    <string name="txtEt">Bienvenido</string>
+    <string name="txtLogin">Ingresar</string>
+    <string name="txtLogout">Cerrar Sesión</string>
+    <string name="txtNews">Noticias</string>
+    <string name="txtProducts">Productos</string>
+    <string name="txtAbout">Acerca de</string>
+    <string name="txtContact">Contacto</string>
+    <string name="txtBtnAcepted">Aceptar</string>
+    <string name="txtBtnCancel">Cancelar</string>
+
+</resources>
