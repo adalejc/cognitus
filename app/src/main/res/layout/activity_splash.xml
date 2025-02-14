@@ -9,7 +9,6 @@
         android:orientation="horizontal"
         android:background="@drawable/fondo_2"
         tools:context=".SplashActivity">
-
         <ImageView
             android:id="@+id/ivLogo"
             android:layout_centerInParent="true"
@@ -18,7 +17,6 @@
             android:contentDescription="@string/txtEt"
             android:src="@drawable/logo"
             />
-
         <Button
             android:id="@+id/btnLogin"
             android:text="@string/txtLogin"
